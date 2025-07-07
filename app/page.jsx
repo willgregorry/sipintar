@@ -1,50 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  House,
-  Info,
-  Users,
-  CircleQuestionMark
-} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <>
-      <header className="sticky flex items-center justify-between border-b-2 px-8">
-        <div className="flex item-center gap-2 py-4">
-          <Image 
-            src={"/ecosort_logo.png"}
-            width={190}
-            height={150}
-            alt="ecosort logo"
+      <header className="sticky flex items-center justify-between px-40">
+        <div className="flex item-center gap-2 pt-8 pb-4">
+          <Image src={"/icon.png"} width={172} height={65} alt="logo" />
+        </div>
+      </header>
+      <main className="flex gap-4">
+        <div className="pt-12">
+          <Image
+            src={"/mountains.png"}
+            width={900}
+            height={707}
+            alt="mountains"
           />
-          <div>
-            <p className="font-semibold pt-2">EcoSort</p>
-            <p className="text-sm text-slate-400">Sort, Collect, Earn.</p>
+        </div>
+        <div className="container flex flex-col gap-[40px] w-[514px] h-[132px] px-12">
+          <p className="text-[#543310] font-bold text-2xl text-center">
+            Selamat datang di Sipintar, website penyedia pendidikan terbaik
+            se-Indonesia!
+          </p>
+          <div className="flex flex-col justify-center items-center gap-[40px]">
+            <Button className="bg-[#543310] text-md text-white font-bold rounded-full w-[300px] cursor-pointer p-2 hover:bg-[#54331099]">
+              Mulai Belajar
+            </Button>
+            <Button className="bg-white text-md text-[#543310] font-bold rounded-full w-[300px] cursor-pointer p-2 border-2 border-[#543310] hover:bg-neutral-100">
+              Sudah punya akun
+            </Button>
           </div>
         </div>
-        <ul className="flex gap-16 pr-[16em]">
-          <Link href="" className="flex gap-2">
-            <House width={15} />
-            Home
-          </Link>
-          <Link href="" className="flex gap-2">
-            <Users width={15} />
-            About Us
-          </Link>
-          <Link href="" className="flex gap-2">
-            <Info width={15} />
-            Services
-          </Link>
-          <Link href="" className="flex gap-2">
-            <CircleQuestionMark width={15} />
-            FAQs
-          </Link>
-        </ul>
-        <Link href="" className="pr-4">
-          Login
-        </Link>
-      </header>
+      </main>
     </>
   );
 }
