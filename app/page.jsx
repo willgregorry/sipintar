@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -13,7 +13,7 @@ export default function Home() {
   };
 
   const handleSignIn = () => {
-    router.push("/signin")
+    router.push("/signin");
   };
 
   return (
@@ -29,15 +29,21 @@ export default function Home() {
           />
         </div>
         <div className="container flex flex-col gap-[40px] w-[514px] h-[132px] -ml-32 pt-8 pr-12">
-          <p className="text-[#543310] font-bold text-2xl text-center w">
+          <p className="text-[#543310] font-bold text-3xl text-center w">
             Selamat datang di Sipintar, website penyedia pendidikan terbaik
             se-Indonesia!
           </p>
           <div className="flex flex-col justify-center items-center gap-[40px]">
-            <Button onClick={handleSignUp} className="bg-[#543310] h-12 text-lg text-white font-bold rounded-full w-[300px] cursor-pointer p-2 hover:bg-[#54331099]">
+            <Button
+              onClick={handleSignUp}
+              className="bg-[#543310] transition duration-300 h-14 text-xl text-white font-bold rounded-full w-[340px] cursor-pointer border-b-6 border-b-[#AF8F6F] p-2 active:border-b-3 hover:bg-[#54331099] hover:scale-105"
+            >
               Mulai Belajar
             </Button>
-            <Button onClick={handleSignIn} className="bg-white h-12 text-lg text-[#543310] font-bold rounded-full w-[300px] cursor-pointer p-2 border-2 border-[#543310] hover:bg-neutral-100">
+            <Button
+              onClick={handleSignIn}
+              className="bg-white transiiton h-14 duration-300 text-xl text-[#543310] font-bold rounded-full w-[340px] cursor-pointer p-2 border-3 border-b-8 border-[#543310] active:border-b-3 hover:scale-105 hover:bg-neutral-100"
+            >
               Sudah punya akun
             </Button>
           </div>

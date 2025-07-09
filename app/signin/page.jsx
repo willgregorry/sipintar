@@ -1,10 +1,9 @@
-import Navbar from "@/components/navbar"
+import Navbar from "@/components/navbar";
 
-export default function SignIn(){
-    return(
-        <>
-            <Navbar />
-            
-        </>
-    );
+export default function SignIn() {
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 }
