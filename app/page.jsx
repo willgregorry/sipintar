@@ -23,13 +23,13 @@ export default function Home() {
         <div className="pt-12">
           <Image
             src={"/mountains.png"}
-            width={900}
+            width={1001}
             height={707}
             alt="mountains"
           />
         </div>
-        <div className="container flex flex-col gap-[40px] w-[514px] h-[132px] pt-8 pr-12">
-          <p className="text-[#543310] font-bold text-2xl text-center">
+        <div className="container flex flex-col gap-[40px] w-[514px] h-[132px] -ml-32 pt-8 pr-12">
+          <p className="text-[#543310] font-bold text-2xl text-center w">
             Selamat datang di Sipintar, website penyedia pendidikan terbaik
             se-Indonesia!
           </p>
