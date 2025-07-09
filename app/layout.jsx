@@ -12,14 +12,14 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "EcoSort - Sort, Collect, Earn.",
+  title: "Sipintar",
   description: "Turn Trash into Cash, Turn Action into a Cleaner Planet.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${nunito.className} h-max-screen antialiased bg-[#f8f4e1] overflow-hidden`}>
+      <body className={`${nunito.className} h-max-screen antialiased bg-[#f8f4e1]`}>
         {children}
       </body>
     </html>

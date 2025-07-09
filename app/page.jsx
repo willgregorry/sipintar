@@ -1,16 +1,25 @@
+'use client';
+
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleSignUp = () => {
+    router.push("/signup");
+  };
+
+  const handleSignIn = () => {
+    router.push("/signin")
+  };
+
   return (
-    <>
-      <header className="sticky flex items-center justify-between px-40">
-        <div className="flex item-center gap-2 pt-8 pb-4">
-          <Image src={"/icon.png"} width={172} height={65} alt="logo" />
-        </div>
-      </header>
-      <main className="flex gap-4">
+    <div>
+      <Navbar />
+      <main className="flex">
         <div className="pt-12">
           <Image
             src={"/mountains.png"}
@@ -19,21 +28,21 @@ export default function Home() {
             alt="mountains"
           />
         </div>
-        <div className="container flex flex-col gap-[40px] w-[514px] h-[132px] px-12">
+        <div className="container flex flex-col gap-[40px] w-[514px] h-[132px] pt-8 pr-12">
           <p className="text-[#543310] font-bold text-2xl text-center">
             Selamat datang di Sipintar, website penyedia pendidikan terbaik
             se-Indonesia!
           </p>
           <div className="flex flex-col justify-center items-center gap-[40px]">
-            <Button className="bg-[#543310] text-md text-white font-bold rounded-full w-[300px] cursor-pointer p-2 hover:bg-[#54331099]">
+            <Button onClick={handleSignUp} className="bg-[#543310] h-12 text-lg text-white font-bold rounded-full w-[300px] cursor-pointer p-2 hover:bg-[#54331099]">
               Mulai Belajar
             </Button>
-            <Button className="bg-white text-md text-[#543310] font-bold rounded-full w-[300px] cursor-pointer p-2 border-2 border-[#543310] hover:bg-neutral-100">
+            <Button onClick={handleSignIn} className="bg-white h-12 text-lg text-[#543310] font-bold rounded-full w-[300px] cursor-pointer p-2 border-2 border-[#543310] hover:bg-neutral-100">
               Sudah punya akun
             </Button>
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
