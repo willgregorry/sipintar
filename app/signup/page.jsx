@@ -14,7 +14,7 @@ export default function SignUp() {
           </h1>
           <form
             action=""
-            className="flex flex-col gap-4 mx-2 my-8 font-semibold"
+            className="flex flex-col gap-6 mx-2 my-8 font-semibold"
           >
             <div className="flex flex-col">
               <label htmlFor="">Username</label>
