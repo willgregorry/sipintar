@@ -1,14 +1,16 @@
-import { Poppins, Nunito } from "next/font/google";
+import { Poppins, Nunito, Fredoka } from "next/font/google";
 import "./globals.css";
 
 const nunito = Nunito({
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
+  variable: '--font-nunito'
 });
 
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+const fredoka = Fredoka({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
+  variable: '--font-fredoka'
 });
 
 export const metadata = {
