@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { easeInOut, motion } from "motion/react";
 import Navbar from "@/components/navbar";
 import { Fredoka } from "next/font/google";
 
@@ -27,7 +28,7 @@ export default function Home() {
       <main className="flex bg-[#D4FAFA]  ">
         <div className="pt-12">
           <Image
-            className="-mt-20 w-screen"
+            className="-mt-20 w-[99vw]"
             src={"/mountains/sun_hills.png"}
             width={1440}
             height={970}
@@ -69,16 +70,35 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="relative w-full -mt-8">
+        <div className="relative w-full -mt-8 bg-[url('/patterns/pattern_light2')] bg-repeat">
           <Image
-            src="/waves/wave2.png"
-            className="w-full"
+            src="/patterns/light_background.png"
+            className="w-screen"
             width={1440}
             height={632}
             alt="wave"
           />
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex gap-30 items-center justify-center">
+            <motion.div animate={{rotate: [0, -12, 0]}} transition={{repeat: Infinity, duration: 2, ease: "easeInOut", times: [0, 0.5, 1]}}>
+              <Image
+                src="/assets/paper.png"
+                alt="paper"
+                width={308}
+                height={341}
+              />
+            </motion.div>
 
+            <div className="w-[35%]">
+              <div className="flex flex-col gap-8 items-center justify-center">
+                <p className="font-black text-white text-6xl text-center">
+                  Materi Komplit
+                </p>
+                <p className="font-semibold text-white text-2xl text-center w-[120%]">
+                  Kami menyediakan materi yang lengkap per bagian dilengkapi
+                  dengan ringkasan, video, dan notes interaktif lainnya
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
