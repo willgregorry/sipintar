@@ -19,7 +19,7 @@ export default function SignUp() {
             <div className="flex flex-col">
               <label htmlFor="">Username</label>
               <input
-                className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-red-500 placeholder:text-[#54331090]"
+                className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
                 type="text"
                 placeholder="Username Anda"
               />
@@ -28,7 +28,7 @@ export default function SignUp() {
             <div className="flex flex-col">
               <label htmlFor="">Email</label>
               <input
-                className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-red-500 placeholder:text-[#54331090]"
+                className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
                 type="email"
                 placeholder="contoh@gmail.com"
               />
@@ -37,7 +37,7 @@ export default function SignUp() {
             <div className="flex flex-col">
               <label htmlFor="">Password</label>
               <input
-                className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-red-500 placeholder:text-[#54331090]"
+                className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
                 type="password"
                 placeholder="Password Anda"
               />
@@ -46,7 +46,7 @@ export default function SignUp() {
             <div className="flex flex-col">
               <label htmlFor="">Konfirmasi Password</label>
               <input
-                className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-red-500 placeholder:text-[#54331090]"
+                className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
                 type="password"
                 placeholder="Konfirmasi Password Anda"
               />
