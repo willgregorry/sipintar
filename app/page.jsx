@@ -28,7 +28,7 @@ export default function Home() {
       <main className="flex bg-[#D4FAFA]  ">
         <div className="pt-12">
           <Image
-            className="-mt-20 w-[99vw]"
+            className="-mt-20 w-screen"
             src={"/mountains/sun_hills.png"}
             width={1440}
             height={970}
@@ -37,7 +37,7 @@ export default function Home() {
         </div>
         <div className="container flex flex-col gap-[40px] w-[514px] h-[132px] mt-18 -ml-[45%] pt-28 pr-12">
           <p className="text-[#543310] uppercase font-black text-2xl text-center">
-            Selamat datang di Sipintar! Aplikasi pembelajaran No.1 di Indonesia!
+            Selamat datang di Sipintar! Aplikasi pembelajaran No. 1 di Indonesia!
           </p>
           <div className="flex flex-col justify-center items-center gap-[40px]">
             <Button
@@ -70,7 +70,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="relative w-full -mt-8 bg-[url('/patterns/pattern_light2')] bg-repeat">
+        <div className="relative w-full z-40 -mt-8 bg-[url('/patterns/pattern_light2')] bg-repeat">
           <Image
             src="/patterns/light_background.png"
             className="w-screen"
@@ -79,7 +79,15 @@ export default function Home() {
             alt="wave"
           />
           <div className="absolute inset-0 flex gap-30 items-center justify-center">
-            <motion.div animate={{rotate: [0, -12, 0]}} transition={{repeat: Infinity, duration: 2, ease: "easeInOut", times: [0, 0.5, 1]}}>
+            <motion.div
+              animate={{ rotate: [0, -12, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 2,
+                ease: "easeInOut",
+                times: [0, 0.5, 1],
+              }}
+            >
               <Image
                 src="/assets/paper.png"
                 alt="paper"
@@ -99,6 +107,45 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="relative w-full z-30 -mt-22 bg-[url('/patterns/pattern_light2')] bg-repeat">
+          <Image
+            src="/patterns/lighter_background.png"
+            className="w-screen"
+            width={1440}
+            height={632}
+            alt="wave"
+          />
+          <div className="absolute inset-0 flex gap-30 items-center justify-center">
+            <div className="w-[35%]">
+              <div className="flex flex-col gap-8 items-center justify-center">
+                <p className="font-black text-white text-6xl text-center">
+                  Gamifikasi Pembelajaran
+                </p>
+                <p className="font-semibold text-white text-2xl text-center w-[120%]">
+                  Pembelajaran yang menyenangkan bersama maskot kami dan
+                  soal-soal yang menantang
+                </p>
+              </div>
+            </div>
+
+            <motion.div
+              animate={{ rotate: [0, -12, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 2,
+                ease: "easeInOut",
+                times: [0, 0.5, 1],
+              }}
+            >
+              <Image
+                src="/assets/phone.png"
+                alt="paper"
+                width={308}
+                height={341}
+              />
+            </motion.div>
           </div>
         </div>
       </section>
