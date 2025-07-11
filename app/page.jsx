@@ -50,7 +50,7 @@ export default function Home() {
           <div className="flex flex-col justify-center items-center gap-[40px]">
             <Button
               onClick={handleSignUp}
-              className="bg-[#543310] duration-300 h-14 text-xl text-white font-bold rounded-full w-[340px] cursor-pointer border-b-6 border-b-[#AF8F6F] p-2 active:border-b-3 hover:bg-[#54331099] hover:scale-105"
+              className="bg-[#543310] duration-300 h-14 text-xl text-white font-bold rounded-full w-[340px] cursor-pointer border-3 border-b-8 border-[#AF8F6F] border-b-[#AF8F6F] p-2 active:border-b-4 hover:bg-[#543310] hover:scale-105"
             >
               Mulai Belajar
             </Button>
@@ -156,24 +156,13 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-        <div className="relative flex items-center justify-center gap-30 mt-24">
-          <motion.div
-            animate={{ rotate: [0, -12, 0] }}
-            transition={{
-              repeat: Infinity,
-              duration: 2,
-              ease: "easeInOut",
-              times: [0, 0.5, 1],
-            }}
-          >
-            <Image
-              src="/assets/statistic.png"
-              alt="paper"
-              width={424}
-              height={413}
-            />
-          </motion.div>
-
+        <div className="relative flex items-center justify-center gap-52 mt-24">
+          <Image
+            src="/assets/statistic.gif"
+            alt="paper"
+            width={194}
+            height={4228}
+          />
           <div className="w-[35%]">
             <div className="flex flex-col gap-8 items-center justify-center">
               <p className="font-black text-[#543310] text-6xl text-center">
@@ -200,6 +189,17 @@ export default function Home() {
               height={952}
               alt="single-mountain"
             />
+            <div className="absolute right-12 top-60 flex flex-col items-center justify-center gap-10 z-50">
+              <p className="text-accent-theme text-center text-5xl font-black w-[70%]">
+                Yuk mulai belajar bersama Sipintar!
+              </p>
+              <Button
+                onClick={handleSignUp}
+                className="bg-[#543310] duration-300 h-14 text-xl text-white font-bold rounded-full w-[340px] cursor-pointer border-3 border-b-8 border-[#AF8F6F] border-b-[#AF8F6F] p-2 active:border-b-4 hover:bg-[#543310] hover:scale-105"
+              >
+                Mulai Belajar
+              </Button>
+            </div>
           </div>
 
           <div className="relative items-center justify-center">
@@ -226,16 +226,28 @@ export default function Home() {
               <div className="flex flex-col gap-4 justify-center items-start">
                 <p className="text-white font-black text-3xl">Ikuti Kami</p>
                 <div className="flex gap-[20px]">
-                  <a href="" target="_blank" rel="noopener noreferrer" className="text-white hover:opacity-80 transition-opacity">
+                  <a
+                    href=""
+                    className="text-white hover:opacity-80 transition-opacity"
+                  >
                     <Instagram size={30} absoluteStrokeWidth />
                   </a>
-                  <a href="" target="_blank" rel="noopener noreferrer" className="text-white hover:opacity-80 transition-opacity">
+                  <a
+                    href=""
+                    className="text-white hover:opacity-80 transition-opacity"
+                  >
                     <Facebook size={30} absoluteStrokeWidth />
                   </a>
-                  <a href="" target="_blank" rel="noopener noreferrer" className="text-white hover:opacity-80 transition-opacity">
+                  <a
+                    href=""
+                    className="text-white hover:opacity-80 transition-opacity"
+                  >
                     <Twitter size={30} absoluteStrokeWidth />
                   </a>
-                  <a href="" target="_blank" rel="noopener noreferrer" className="text-white hover:opacity-80 transition-opacity">
+                  <a
+                    href=""
+                    className="text-white hover:opacity-80 transition-opacity"
+                  >
                     <Youtube size={30} absoluteStrokeWidth />
                   </a>
                 </div>
