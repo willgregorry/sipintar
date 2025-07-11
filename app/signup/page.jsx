@@ -1,23 +1,31 @@
 import Navbar from "@/components/navbar";
 import Image from "next/image";
 import { Button } from "@/components/ui/button"
+import { ChevronLeft } from "lucide-react";
 
 export default function SignUp() {
   return (
     <div>
       <Navbar />
-      <div className="flex gap-[40px]">
-        <Image src={"/mountain.png"} width={766} height={848} alt="mountains" />
-        <div className="flex flex-col  w-[35%]">
-          <h1 className="font-bold text-center text-4xl">
-            Ayo mulai perjalanan Anda!
-          </h1>
+      <div className="relative gap-[40px]">
+        <Image className="w-screen" src={"/mountains/park.png"} width={1440} height={843} alt="park" />
+        <div className="flex flex-col  w-[35%] -mt-[55%] ml-[33%]">
+          <div className="flex">
+            <div className="-ml-22 pr-16 text-accent-theme">
+              <a href="/">
+                <ChevronLeft size={45} absoluteStrokeWidth />
+              </a>
+            </div>
+            <h1 className="font-black text-accent-theme text-center text-4xl">
+              Ayo mulai perjalanan Anda!
+            </h1>
+          </div>
           <form
             action=""
             className="flex flex-col gap-6 mx-2 my-8 font-semibold"
           >
             <div className="flex flex-col">
-              <label htmlFor="">Username</label>
+              <label htmlFor="" className="text-accent-theme font-bold">Username</label>
               <input
                 className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
                 type="text"
@@ -26,7 +34,7 @@ export default function SignUp() {
             </div>
 
             <div className="flex flex-col">
-              <label htmlFor="">Email</label>
+              <label htmlFor="" className="text-accent-theme font-bold">Email</label>
               <input
                 className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
                 type="email"
@@ -35,7 +43,7 @@ export default function SignUp() {
             </div>
 
             <div className="flex flex-col">
-              <label htmlFor="">Password</label>
+              <label htmlFor="" className="text-accent-theme font-bold">Password</label>
               <input
                 className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
                 type="password"
@@ -44,7 +52,7 @@ export default function SignUp() {
             </div>
 
             <div className="flex flex-col">
-              <label htmlFor="">Konfirmasi Password</label>
+              <label htmlFor="" className="text-accent-theme font-bold">Konfirmasi Password</label>
               <input
                 className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
                 type="password"
