@@ -8,7 +8,7 @@ export default function SignUp() {
     <div>
       <Navbar />
       <div className="relative gap-[40px]">
-        <Image className="w-screen" src={"/mountains/park.png"} width={1440} height={843} alt="park" />
+        <Image className="w-screen" src={"/mountains/park.png"} width={5760} height={3372} alt="park" />
         <div className="flex flex-col  w-[35%] -mt-[55%] ml-[33%]">
           <div className="flex">
             <div className="-ml-22 pr-16 text-accent-theme">
@@ -61,7 +61,7 @@ export default function SignUp() {
             </div>
             <Button
               type="submit"
-              className="bg-[#543310] duration-300 h-14 text-xl text-white font-bold rounded-full w-full cursor-pointer border-b-6 border-b-[#AF8F6F] p-2 active:border-b-3 hover:bg-[#54331099] hover:scale-105"
+              className="bg-[#543310] duration-300 h-14 text-xl text-white font-bold rounded-full w-full cursor-pointer border-3 border-b-8 border-[#AF8F6F] border-b-[#AF8F6F] p-2 active:border-b-4 hover:bg-[#543310] hover:scale-105"
             >
               Daftar
             </Button>

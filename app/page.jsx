@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { easeInOut, motion } from "motion/react";
+import { motion } from "motion/react";
 import { Instagram, Facebook, Twitter, Youtube } from "lucide-react";
 
 export default function Home() {
