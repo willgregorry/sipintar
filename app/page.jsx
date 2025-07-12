@@ -33,6 +33,29 @@ export default function Home() {
             height={970}
             alt="mountains"
           />
+          <div>
+            <motion.div animate={{ rotate: [0, 22, 0], y: [0, -11, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", times: [0, 0.5, 1] }} className="absolute top-90 left-55">
+              <Image src="/assets/divide.png" width={57} height={59} alt="divide" />
+            </motion.div>
+            <motion.div animate={{ rotate: [0, -10, 0], y: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", times: [0, 0.5, 1] }} className="absolute top-125 left-55 -rotate-30">
+              <Image src="/assets/paper.png" width={90} height={82} alt="paper" />
+            </motion.div>
+            <motion.div animate={{ rotate: [0, 20, 0], y: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", times: [0, 0.5, 1] }} className="absolute top-65 left-90">
+              <Image src="/assets/plus.png" width={69} height={69} alt="plus" />
+            </motion.div>
+            <motion.div animate={{ rotate: [0, 25, 0], y: [0, -12, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", times: [0, 0.5, 1] }} className="absolute top-105 left-85">
+              <Image src="/assets/multiply.png" width={59} height={59} alt="multiply" />
+            </motion.div>
+            <motion.div animate={{ y: [0, 20, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", times: [0, 0.5, 1] }} className="absolute top-100 left-120">
+              <Image src="/assets/minus.png" width={70} height={70} alt="minus" />
+            </motion.div>
+            <motion.div animate={{ x: [0, -40, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", times: [0, 0.5, 1] }} className="absolute top-70 left-150">
+              <Image src="/assets/star.png" width={100} height={100} alt="star" />
+            </motion.div>
+            <motion.div animate={{ rotate: [0, 20, 0], y: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", times: [0, 0.5, 1] }} className="absolute top-100 left-160">
+              <Image src="/assets/white_phone.png" width={104} height={111} alt="white phone" />
+            </motion.div>
+          </div>
           <div className="absolute top-100 left-80">
             <Image
               src="/assets/sipintar.png"
