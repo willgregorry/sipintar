@@ -10,13 +10,13 @@ export default function SignUp() {
       <div className="relative gap-[40px]">
         <Image className="w-screen" src={"/mountains/park.png"} width={5760} height={3372} alt="park" />
         <div className="flex flex-col  w-[35%] -mt-[55%] ml-[33%]">
-          <div className="flex">
+          <div className="flex gap-5">
             <div className="-ml-22 pr-16 text-accent-theme">
               <a href="/">
                 <ChevronLeft size={45} absoluteStrokeWidth />
               </a>
             </div>
-            <h1 className="font-black text-accent-theme text-center text-4xl">
+            <h1 className="font-semibold font-fredoka text-accent-theme text-center text-4xl">
               Ayo mulai perjalanan Anda!
             </h1>
           </div>

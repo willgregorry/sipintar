@@ -17,13 +17,13 @@ export default function LupaPassword() {
           />
         </div>
         <div className="absolute flex flex-col  w-[35%] ml-180">
-          <div className="flex gap-20">
+          <div className="flex gap-22">
             <div className="-ml-16 pr-16 text-accent-theme">
               <a href="/signin">
                 <ChevronLeft size={45} absoluteStrokeWidth />
               </a>
             </div>
-            <h1 className="font-black text-accent-theme text-center text-4xl">
+            <h1 className="font-semibold font-fredoka text-accent-theme text-center text-4xl">
               Lupa Password?
             </h1>
           </div>
@@ -36,7 +36,7 @@ export default function LupaPassword() {
             className="flex flex-col gap-6 mx-2 my-8 font-semibold"
           >
             <div className="flex flex-col">
-              <label htmlFor="" className="text-accent-theme font-bold">Email / Username</label>
+              <label htmlFor="" className="text-accent-theme font-bold">Email</label>
               <input
                 className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
                 type="text"

@@ -18,13 +18,13 @@ export default function SignIn() {
           />
         </div>
         <div className="absolute flex flex-col left-180 w-[35%]">
-          <div className="flex">
+          <div className="flex gap-5">
             <div className="-ml-16 pr-16 text-accent-theme">
               <a href="/">
                 <ChevronLeft size={45} absoluteStrokeWidth />
               </a>
             </div>
-            <h1 className="font-black text-accent-theme text-center text-4xl">
+            <h1 className="font-semibold font-fredoka text-accent-theme text-center text-4xl">
               Selamat datang kembali!
             </h1>
           </div>

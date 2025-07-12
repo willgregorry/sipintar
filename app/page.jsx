@@ -73,7 +73,7 @@ export default function Home() {
             height={181}
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <p className="uppercase text-3xl text-center text-white font-black">
+            <p className="uppercase font-fredoka text-3xl text-center text-white font-semibold">
               Mengapa belajar bersama kami?
             </p>
           </div>
@@ -106,7 +106,7 @@ export default function Home() {
 
             <div className="w-[35%]">
               <div className="flex flex-col gap-8 items-center justify-center">
-                <p className="font-black text-white text-6xl text-center">
+                <p className="font-semibold font-fredoka text-white text-6xl text-center">
                   Materi Komplit
                 </p>
                 <p className="font-semibold text-white text-2xl text-center w-[120%]">
@@ -128,7 +128,7 @@ export default function Home() {
           <div className="absolute inset-0 flex gap-30 items-center justify-center">
             <div className="w-[35%]">
               <div className="flex flex-col gap-8 items-center justify-center">
-                <p className="font-black text-white text-6xl text-center">
+                <p className="font-semibold font-fredoka text-white text-6xl text-center">
                   Gamifikasi Pembelajaran
                 </p>
                 <p className="font-semibold text-white text-2xl text-center w-[120%]">
@@ -165,7 +165,7 @@ export default function Home() {
           />
           <div className="w-[35%]">
             <div className="flex flex-col gap-8 items-center justify-center">
-              <p className="font-black text-[#543310] text-6xl text-center">
+              <p className="font-semibold font-fredoka text-[#543310] text-6xl text-center">
                 Memotivasi Kamu
               </p>
               <p className="font-semibold text-[#543310] text-2xl text-center w-[120%]">
@@ -190,12 +190,12 @@ export default function Home() {
               alt="single-mountain"
             />
             <div className="absolute right-12 top-60 flex flex-col items-center justify-center gap-10 z-50">
-              <p className="text-accent-theme text-center text-5xl font-black w-[70%]">
+              <p className="text-accent-theme text-center text-6xl font-semibold font-fredoka w-[70%]">
                 Yuk mulai belajar bersama Sipintar!
               </p>
               <Button
                 onClick={handleSignUp}
-                className="bg-[#543310] duration-300 h-14 text-xl text-white font-bold rounded-full w-[340px] cursor-pointer border-3 border-b-8 border-[#AF8F6F] border-b-[#AF8F6F] p-2 active:border-b-4 hover:bg-[#543310] hover:scale-105"
+                className="bg-[#543310] duration-300 h-14 text-xl text-white font-bold rounded-full w-[300px] cursor-pointer border-3 border-b-8 border-[#AF8F6F] border-b-[#AF8F6F] p-2 active:border-b-4 hover:bg-[#543310] hover:scale-105"
               >
                 Mulai Belajar
               </Button>
@@ -218,13 +218,13 @@ export default function Home() {
                   height={76}
                   alt="logo footer"
                 />
-                <p className="text-white text-xl font-black">
+                <p className="text-white text-xl font-semibold font-fredoka">
                   ©2025 Sipintar. All Right Reserved
                 </p>
               </div>
 
               <div className="flex flex-col gap-4 justify-center items-start">
-                <p className="text-white font-black text-3xl">Ikuti Kami</p>
+                <p className="text-white font-semibold font-fredoka text-3xl">Ikuti Kami</p>
                 <div className="flex gap-[20px]">
                   <a
                     href=""

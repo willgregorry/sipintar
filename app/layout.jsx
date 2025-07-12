@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`scroll-smooth`}>
       <body
-        className={`${nunito.className} h-max-screen antialiased overflow-x-hidden bg-[#f8f4e1]`}
+        className={`${nunito.variable} ${fredoka.variable} h-max-screen antialiased overflow-x-hidden bg-[#f8f4e1]`}
       >
         {children}
       </body>
