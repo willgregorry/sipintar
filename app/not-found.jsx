@@ -16,7 +16,7 @@ export default function SignUp() {
   return (
     <div>
       <Navbar />
-      <div className="relative gap-[40px]">
+      <div className="relative gap-[40px] mt-12">
         <Image className="w-screen" src={"/mountains/park.png"} width={5760} height={3372} alt="park" />
         <div className="flex flex-col justify-center items-center gap-4 w-[35%] -mt-[55%] ml-[33%]">
           <h1 className="uppercase font-fredoka text-accent-theme text-6xl font-black">Oops!</h1>
