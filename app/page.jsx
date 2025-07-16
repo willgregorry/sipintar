@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import { Instagram, Facebook, Twitter, Youtube } from "lucide-react";
+import Navbar from "@/components/navbar"
+import { useState } from "react";
 
 export default function Home() {
   const router = useRouter();
@@ -19,11 +21,7 @@ export default function Home() {
 
   return (
     <div>
-      <header className="sticky flex bg-[#F8F4E1] items-start justify-between px-40 [box-shadow:0_4px_4px_2px_rgba(0,0,0,0.25)]">
-        <div className="flex item-center gap-2 pt-8 pb-4">
-          <Image src={"/icon.png"} width={172} height={65} alt="logo" />
-        </div>
-      </header>
+      <Navbar />
       <main className="flex bg-[#D4FAFA]  ">
         <div className="pt-12">
           <Image

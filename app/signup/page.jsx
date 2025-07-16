@@ -1,14 +1,26 @@
+"use client";
+
 import Navbar from "@/components/navbar";
 import Image from "next/image";
-import { Button } from "@/components/ui/button"
-import { ChevronLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, Eye, EyeOff } from "lucide-react";
+import { useState } from "react";
 
 export default function SignUp() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
   return (
     <div>
       <Navbar />
       <div className="relative gap-[40px]">
-        <Image className="w-screen" src={"/mountains/park.png"} width={5760} height={3372} alt="park" />
+        <Image
+          className="w-screen"
+          src={"/mountains/park.png"}
+          width={5760}
+          height={3372}
+          alt="park"
+        />
         <div className="flex flex-col  w-[35%] -mt-[55%] ml-[33%]">
           <div className="flex gap-5">
             <div className="-ml-22 pr-16 text-accent-theme">
@@ -25,7 +37,9 @@ export default function SignUp() {
             className="flex flex-col gap-6 mx-2 my-8 font-semibold"
           >
             <div className="flex flex-col">
-              <label htmlFor="" className="text-accent-theme font-bold">Username</label>
+              <label htmlFor="" className="text-accent-theme font-bold">
+                Username
+              </label>
               <input
                 className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
                 type="text"
@@ -34,7 +48,9 @@ export default function SignUp() {
             </div>
 
             <div className="flex flex-col">
-              <label htmlFor="" className="text-accent-theme font-bold">Email</label>
+              <label htmlFor="" className="text-accent-theme font-bold">
+                Email
+              </label>
               <input
                 className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
                 type="email"
@@ -43,21 +59,43 @@ export default function SignUp() {
             </div>
 
             <div className="flex flex-col">
-              <label htmlFor="" className="text-accent-theme font-bold">Password</label>
-              <input
-                className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
-                type="password"
-                placeholder="Password Anda"
-              />
+              <label htmlFor="" className="text-accent-theme font-bold">
+                Password
+              </label>
+              <div className="relative">
+                <input
+                  className="h-14 w-full p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Password Anda"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-6 top-1/2 -translate-y-1/2 text-[#5C3B00]"
+                >
+                  {showPassword ? <EyeOff /> : <Eye />}
+                </button>
+              </div>
             </div>
 
             <div className="flex flex-col">
-              <label htmlFor="" className="text-accent-theme font-bold">Konfirmasi Password</label>
-              <input
-                className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
-                type="password"
-                placeholder="Konfirmasi Password Anda"
-              />
+              <label htmlFor="" className="text-accent-theme font-bold">
+                Konfirmasi Password
+              </label>
+              <div className="relative">
+                <input
+                  className="h-14 w-full p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
+                  type={showConfirmPassword ? "text" : "password"}
+                  placeholder="Password Anda"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                  className="absolute right-6 top-1/2 -translate-y-1/2 text-[#5C3B00]"
+                >
+                  {showConfirmPassword ? <EyeOff /> : <Eye />}
+                </button>
+              </div>
             </div>
             <Button
               type="submit"
@@ -65,7 +103,6 @@ export default function SignUp() {
             >
               Daftar
             </Button>
-            
           </form>
         </div>
       </div>

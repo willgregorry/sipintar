@@ -7,7 +7,7 @@ export default function LupaPassword() {
   return (
     <>
       <Navbar />
-      <div className="relative flex gap-[40px]">
+      <div className="relative flex gap-[40px] mt-12">
         <div className="absolute">
           <Image
             src={"/mountains/park2.png"}

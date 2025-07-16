@@ -1,14 +1,23 @@
+'use client';
+
 import Navbar from "@/components/navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft } from "lucide-react";
+import { 
+  ChevronLeft,
+  Eye,
+  EyeOff
+} from "lucide-react";
+import { useState } from 'react';
 
 export default function SignIn() {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <>
       <Navbar />
-      <div className="relative flex gap-[40px]">
+      <div className="relative flex gap-[40px] mt-12">
         <div className="absolute">
           <Image
             src={"/mountains/park2.png"}
@@ -47,11 +56,20 @@ export default function SignIn() {
               <label htmlFor="" className="text-accent-theme font-bold">
                 Password
               </label>
-              <input
-                className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
-                type="password"
-                placeholder="Password Anda"
-              />
+              <div className="relative">
+                <input
+                  className="h-14 w-full p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
+                  type={showPassword ? 'text' : 'password'}
+                  placeholder="Password Anda"
+                />
+                <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-6 top-1/2 -translate-y-1/2 text-[#5C3B00]"
+                  >
+                    {showPassword ? <EyeOff /> : <Eye />}
+                </button>
+              </div>
             </div>
 
             <Button
