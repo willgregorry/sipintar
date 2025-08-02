@@ -1,9 +1,91 @@
+'use client'
 
+import Navbar from "@/components/navbar";
+import Image from "next/image";
+import { ChevronLeft } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 export default function Profile() {
-    return(
-        <div>
-            
+  const router = useRouter();
+  
+  const handleEdit = () => {
+    router.push('/beranda/profile/edit-profile');
+  }
+
+  return (
+    <>
+      <Navbar />
+      <div className="container flex flex-col gap-12 mt-16 mb-28 mx-40 w-auto h-screen">
+        <div className="flex gap-4 items-center">
+          <ChevronLeft size={40} strokeWidth={1} />
+          <h1 className="uppercase font-fredoka font-semibold text-accent-theme text-4xl">
+            Profile
+          </h1>
         </div>
-    );
+        <div className="container gap-12 flex w-full">
+          <Avatar className="w-50 h-50">
+            <AvatarImage src="https://github.com/sulthanrps.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col justify-center gap-2 w-[60%]">
+            <p className="text-4xl font-bold text-accent-theme">
+              Name goes here
+            </p>
+            <p className="text-md font-semibold text-accent-theme">@username</p>
+            <p className="text-accent-theme font-semibold">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis
+              quisquam nemo soluta! Ullam necessitatibus corrupti natus iure, ex
+              mollitia quasi odit placeat, sed culpa perferendis porro, repellat
+              sunt veritatis quibusdam.
+            </p>
+            <p className="text-lg font-bold text-accent-theme">Bergabung sejak 2025</p>
+          </div>
+          <div className="flex items-end translate-y-8">
+            <Button
+              onClick={handleEdit}
+              className="bg-[#543310] duration-300 h-14 text-sm text-white font-bold rounded-full w-44 cursor-pointer border-3 border-b-8 border-[#AF8F6F] border-b-[#AF8F6F] p-2 active:border-b-4 hover:bg-[#543310] hover:scale-105"
+            >
+              Edit Profile
+            </Button>
+          </div>
+        </div>
+        <hr className="border-1 border-accent-theme"/>
+        <div className="flex flex-col w-full h-auto gap-8">
+            <span className="text-accent-theme font-black text-4xl">Statistik</span>
+            <div className="grid grid-cols-2 grid-rows-2 gap-x-8 gap-y-6">
+                <div className="flex items-center pl-16 gap-16 h-28 rounded-xl bg-[#CAB5A0]">
+                    <Image className="w-20 h-20" src='/statistics/waktu_belajar.png' width={252} height={245} alt="waktu_belajar" />
+                    <div className="flex flex-col gap-2 justify-center">
+                        <p className="uppercase text-xl font-semibold text-accent-theme">Lama Belajar</p>
+                        <p className="text-xl font-semibold text-accent-theme">0</p>
+                    </div>
+                </div>
+                <div className="flex items-center pl-16 gap-16 h-28 rounded-xl bg-[#CAB5A0]">
+                    <Image className="w-20 h-20" src='/statistics/paper.png' width={252} height={245} alt="waktu_belajar" />
+                    <div className="flex flex-col gap-2 justify-center">
+                        <p className="uppercase text-xl font-semibold text-accent-theme">Soal Dikerjakan</p>
+                        <p className="text-xl font-semibold text-accent-theme">0</p>
+                    </div>
+                </div>
+                <div className="flex items-center pl-16 gap-16 h-28 rounded-xl bg-[#CAB5A0]">
+                    <Image className="w-20 h-20" src='/statistics/streak.png' width={252} height={245} alt="waktu_belajar" />
+                    <div className="flex flex-col gap-2 justify-center">
+                        <p className="uppercase text-xl font-semibold text-accent-theme">Streak</p>
+                        <p className="text-xl font-semibold text-accent-theme">0</p>
+                    </div>
+                </div>
+                <div className="flex items-center pl-16 gap-16 h-28 rounded-xl bg-[#CAB5A0]">
+                    <Image className="w-20 h-20" src='/statistics/percentage.png' width={252} height={245} alt="waktu_belajar" />
+                    <div className="flex flex-col gap-2 justify-center">
+                        <p className="uppercase text-xl font-semibold text-accent-theme">Penyelesaian</p>
+                        <p className="text-xl font-semibold text-accent-theme">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </>
+  );
 }
