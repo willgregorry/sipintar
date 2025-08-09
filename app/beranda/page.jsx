@@ -1,9 +1,12 @@
+'use client'
+
 import Appbar from "@/components/appbar";
 import materiData from "@/data/materi.json";
 import LevelItem from "@/components/levelItem";
 import Image from "next/image";
 import Link from "next/link";
 import Roadmap from "@/components/roadmap";
+import { redirect } from "next/navigation";
 
 export default function Beranda() {
   const materi = materiData[0];
@@ -13,7 +16,7 @@ export default function Beranda() {
 
   return (
     <div>
-      <div className="px-44 mt-24 h-auto mb-24">
+      <div className="px-44 my-24 h-auto">
         <Appbar />
 
         {/* Roadmap */}
@@ -28,7 +31,7 @@ export default function Beranda() {
             <h1 className="text-[28px] font-bold">{materi.materi}</h1>
             <p className="text-md font-light">{materi.deskripsi}</p>
           </div>
-          <button className="flex leading-none items-center bg-[#AF8F6F] duration-300 h-auto text-xl text-white font-bold rounded-md w-40 cursor-pointer border-3 border-b-8 border-[#CAB5A0] border-b-[#CAB5A0] p-2 active:border-b-4 hover:bg-[#AF8F6F] hover:scale-105">
+          <button onClick={() => redirect("/beranda/materi")} className="flex leading-none items-center bg-[#AF8F6F] duration-300 h-auto text-xl text-white font-bold rounded-md w-40 cursor-pointer border-3 border-b-8 border-[#CAB5A0] border-b-[#CAB5A0] p-2 active:border-b-4 hover:bg-[#AF8F6F] hover:scale-105">
             <Image
               src="/assets/paper.png"
               alt="materi"
@@ -42,7 +45,9 @@ export default function Beranda() {
         {/* Level List */}
         <div className="space-y-10 mt-24 z-0">
           {materi.level.map((lvl, i) => {
-            const isLocked = lvl.status === 'locked';
+            const topicSlug = materi.slug_materi;
+            const levelSlug = lvl.slug_level;
+            const isLocked = lvl.status === "locked";
             const isEven = i % 2 === 0;
 
             const wrapperClassName = `
@@ -52,17 +57,20 @@ export default function Beranda() {
             `;
 
             return (
-              <div key={lvl.slug} className={wrapperClassName}>
-              {isLocked ? (
-                <LevelItem nama={lvl.nama} status={lvl.status} />
-              ) : (
-                <Link href={`/beranda`/*`/materi/${lvl.slug}`*/} legacyBehavior>
-                  <a className="cursor-pointer">
-                    <LevelItem nama={lvl.nama} status={lvl.status} />
-                  </a>
-                </Link>
-              )}
-            </div>
+              <div key={lvl.id} className={wrapperClassName}>
+                {isLocked ? (
+                  <LevelItem nama={lvl.nama} status={lvl.status} />
+                ) : (
+                  <Link
+                    href={`/beranda/materi/${topicSlug}/${levelSlug}`}
+                    legacyBehavior
+                  >
+                    <a className="cursor-pointer">
+                      <LevelItem nama={lvl.nama} status={lvl.status} />
+                    </a>
+                  </Link>
+                )}
+              </div>
             );
           })}
         </div>
@@ -88,7 +96,7 @@ export default function Beranda() {
         {/* Level List */}
         <div className="space-y-10 mt-24 z-0">
           {limit.level.map((lvl, i) => {
-            const isLocked = lvl.status === 'locked';
+            const isLocked = lvl.status === "locked";
             const isEven = i % 2 === 0;
 
             const wrapperClassName = `
@@ -98,17 +106,20 @@ export default function Beranda() {
             `;
 
             return (
-              <div key={lvl.slug} className={wrapperClassName}>
-              {isLocked ? (
-                <LevelItem nama={lvl.nama} status={lvl.status} />
-              ) : (
-                <Link href={`/beranda`/*`/materi/${lvl.slug}`*/} legacyBehavior>
-                  <a className="cursor-pointer">
-                    <LevelItem nama={lvl.nama} status={lvl.status} />
-                  </a>
-                </Link>
-              )}
-            </div>
+              <div key={lvl.id} className={wrapperClassName}>
+                {isLocked ? (
+                  <LevelItem nama={lvl.nama} status={lvl.status} />
+                ) : (
+                  <Link
+                    href={`/beranda` /*`/materi/${lvl.slug}`*/}
+                    legacyBehavior
+                  >
+                    <a className="cursor-pointer">
+                      <LevelItem nama={lvl.nama} status={lvl.status} />
+                    </a>
+                  </Link>
+                )}
+              </div>
             );
           })}
         </div>
@@ -134,7 +145,7 @@ export default function Beranda() {
         {/* Level List */}
         <div className="space-y-10 mt-24 z-0">
           {turunan.level.map((lvl, i) => {
-            const isLocked = lvl.status === 'locked';
+            const isLocked = lvl.status === "locked";
             const isEven = i % 2 === 0;
 
             const wrapperClassName = `
@@ -144,17 +155,20 @@ export default function Beranda() {
             `;
 
             return (
-              <div key={lvl.slug} className={wrapperClassName}>
-              {isLocked ? (
-                <LevelItem nama={lvl.nama} status={lvl.status} />
-              ) : (
-                <Link href={`/beranda`/*`/materi/${lvl.slug}`*/} legacyBehavior>
-                  <a className="cursor-pointer">
-                    <LevelItem nama={lvl.nama} status={lvl.status} />
-                  </a>
-                </Link>
-              )}
-            </div>
+              <div key={lvl.id} className={wrapperClassName}>
+                {isLocked ? (
+                  <LevelItem nama={lvl.nama} status={lvl.status} />
+                ) : (
+                  <Link
+                    href={`/beranda` /*`/materi/${lvl.slug}`*/}
+                    legacyBehavior
+                  >
+                    <a className="cursor-pointer">
+                      <LevelItem nama={lvl.nama} status={lvl.status} />
+                    </a>
+                  </Link>
+                )}
+              </div>
             );
           })}
         </div>
@@ -180,7 +194,7 @@ export default function Beranda() {
         {/* Level List */}
         <div className="space-y-10 mt-24 z-0">
           {integral.level.map((lvl, i) => {
-            const isLocked = lvl.status === 'locked';
+            const isLocked = lvl.status === "locked";
             const isEven = i % 2 === 0;
 
             const wrapperClassName = `
@@ -190,17 +204,20 @@ export default function Beranda() {
             `;
 
             return (
-              <div key={lvl.slug} className={wrapperClassName}>
-              {isLocked ? (
-                <LevelItem nama={lvl.nama} status={lvl.status} />
-              ) : (
-                <Link href={`/beranda`/*`/materi/${lvl.slug}`*/} legacyBehavior>
-                  <a className="cursor-pointer">
-                    <LevelItem nama={lvl.nama} status={lvl.status} />
-                  </a>
-                </Link>
-              )}
-            </div>
+              <div key={lvl.id} className={wrapperClassName}>
+                {isLocked ? (
+                  <LevelItem nama={lvl.nama} status={lvl.status} />
+                ) : (
+                  <Link
+                    href={`/beranda` /*`/materi/${lvl.slug}`*/}
+                    legacyBehavior
+                  >
+                    <a className="cursor-pointer">
+                      <LevelItem nama={lvl.nama} status={lvl.status} />
+                    </a>
+                  </Link>
+                )}
+              </div>
             );
           })}
         </div>

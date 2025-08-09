@@ -6,9 +6,11 @@ import { ChevronLeft } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import profileData from '@/data/profile.json';
 
 export default function Profile() {
   const router = useRouter();
+  const user = profileData[0];
   
   const handleEdit = () => {
     router.push('/beranda/profile/edit-profile');
@@ -32,16 +34,13 @@ export default function Profile() {
           </Avatar>
           <div className="flex flex-col justify-center gap-2 w-[60%]">
             <p className="text-4xl font-bold text-accent-theme">
-              Name goes here
+              { user.name }
             </p>
-            <p className="text-md font-semibold text-accent-theme">@username</p>
+            <p className="text-md font-semibold text-accent-theme">@{user.username}</p>
             <p className="text-accent-theme font-semibold">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis
-              quisquam nemo soluta! Ullam necessitatibus corrupti natus iure, ex
-              mollitia quasi odit placeat, sed culpa perferendis porro, repellat
-              sunt veritatis quibusdam.
+              { user.description }
             </p>
-            <p className="text-lg font-bold text-accent-theme">Bergabung sejak 2025</p>
+            <p className="text-lg font-bold text-accent-theme">Bergabung sejak {user.joined_at}</p>
           </div>
           <div className="flex items-end translate-y-8">
             <Button
@@ -60,28 +59,28 @@ export default function Profile() {
                     <Image className="w-20 h-20" src='/statistics/waktu_belajar.png' width={252} height={245} alt="waktu_belajar" />
                     <div className="flex flex-col gap-2 justify-center">
                         <p className="uppercase text-xl font-semibold text-accent-theme">Lama Belajar</p>
-                        <p className="text-2xl font-bold text-accent-theme">0</p>
+                        <p className="text-2xl font-bold text-accent-theme">{user.stats.lama_belajar}</p>
                     </div>
                 </div>
                 <div className="flex items-center pl-16 gap-16 h-28 rounded-xl bg-[#CAB5A0]">
                     <Image className="w-20 h-20" src='/statistics/paper.png' width={252} height={245} alt="waktu_belajar" />
                     <div className="flex flex-col gap-2 justify-center">
                         <p className="uppercase text-xl font-semibold text-accent-theme">Soal Dikerjakan</p>
-                        <p className="text-2xl font-bold text-accent-theme">0</p>
+                        <p className="text-2xl font-bold text-accent-theme">{user.stats.soal_dikerjakan}</p>
                     </div>
                 </div>
                 <div className="flex items-center pl-16 gap-16 h-28 rounded-xl bg-[#CAB5A0]">
                     <Image className="w-20 h-20" src='/statistics/streak.png' width={252} height={245} alt="waktu_belajar" />
                     <div className="flex flex-col gap-2 justify-center">
                         <p className="uppercase text-xl font-semibold text-accent-theme">Streak</p>
-                        <p className="text-2xl font-bold text-accent-theme">0</p>
+                        <p className="text-2xl font-bold text-accent-theme">{user.stats.streak}</p>
                     </div>
                 </div>
                 <div className="flex items-center pl-16 gap-16 h-28 rounded-xl bg-[#CAB5A0]">
                     <Image className="w-20 h-20" src='/statistics/percentage.png' width={252} height={245} alt="waktu_belajar" />
                     <div className="flex flex-col gap-2 justify-center">
                         <p className="uppercase text-xl font-semibold text-accent-theme">Penyelesaian</p>
-                        <p className="text-2xl font-bold text-accent-theme">0</p>
+                        <p className="text-2xl font-bold text-accent-theme">{user.stats.penyelesaian}</p>
                     </div>
                 </div>
             </div>

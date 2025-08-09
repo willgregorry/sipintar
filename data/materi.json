@@ -1,49 +1,91 @@
 [
-    {
-        "materi": "Persamaan Linear",
-        "deskripsi": "Belajar bagaimana menyelesaikan persamaan 2 variabel dan 3 variabel",
-        "level": [
-            { "nama": "Pengenalan", "status": "current", "slug": "/materi/persamaan_linear/pengenalan"},
-            { "nama": "Sistem Persamaan 2 Variabel", "status": "locked" },
-            { "nama": "Metode Grafik", "status": "locked" },
-            { "nama": "Sistem Persamaan 3 Variabel", "status": "locked" },
-            { "nama": "Kuis", "status": "locked" }
+  {
+    "materi": "Persamaan Linear",
+    "slug_materi": "persamaan-linear",
+    "deskripsi": "Belajar bagaimana menyelesaikan persamaan 2 variabel dan 3 variabel",
+    "level": [
+      {
+        "id": 1,
+        "nama": "Pengenalan",
+        "slug_level": "pengenalan",
+        "status": "current",
+        "youtube": "https://www.youtube.com/embed/W3o9-8vCdsc?si=RLgRfuXuHW0d5Ple",
+        "pengantar": "Selamat datang di bab tentang sistem persamaan linear. Pernahkah Anda dihadapkan pada sebuah masalah dengan beberapa nilai yang tidak diketahui sekaligus? Misalnya, saat mencoba menentukan harga masing-masing dari dua jenis barang yang Anda beli dengan total harga tertentu, atau ketika merencanakan alokasi sumber daya yang terbatas untuk berbagai kebutuhan. Situasi seperti inilah yang menjadi dasar dari sistem persamaan linear, sebuah topik fundamental dalam matematika yang memiliki aplikasi luas di berbagai bidang, mulai dari ekonomi, teknik, hingga ilmu komputer. Sistem ini pada dasarnya adalah kumpulan dari dua atau lebih persamaan linear yang saling terkait karena menggunakan variabel-variabel yang sama. Tujuan utama kita dalam bab ini adalah menemukan solusi—yaitu satu set nilai unik untuk variabel-variabel tersebut yang memenuhi semua persamaan dalam sistem secara serentak. Kita akan menjelajahi konsep dasar dari sistem persamaan linear dan mempelajari berbagai metode efektif untuk menyelesaikannya, mulai dari metode grafik, substitusi, hingga eliminasi, yang akan membekali Anda dengan alat yang kuat untuk memecahkan masalah-masalah yang lebih kompleks.",
+        "isi": [
+          {
+            "paragraf-1": "Selamat datang di materi pertama kita! Sebelum kita menyelam lebih dalam ke metode-metode penyelesaian, kita perlu memahami terlebih dahulu: apa sebenarnya 'sistem persamaan linear' itu? Mari kita mulai dari dasarnya.",
+            "paragraf-2": "Anda mungkin sudah familiar dengan persamaan linear. Ini adalah persamaan aljabar yang, jika digambarkan dalam sebuah grafik, akan membentuk sebuah garis lurus. Contoh sederhananya adalah y = 2x + 1. Setiap titik (x, y) yang ada pada garis tersebut adalah 'solusi' untuk persamaan tunggal tersebut."
+        }
         ]
-    },
-    {
-        "materi": "Limit",
-        "deskripsi": "Belajar bagaimana menyelesaikan persamaan-persamaan limit",
-        "level": [
-            { "nama": "Pengenalan", "status": "locked"},
-            { "nama": "Limit Aljabar", "status": "locked" },
-            { "nama": "Limit Trigonometri", "status": "locked" },
-            { "nama": "Limit Fungsi Tak Hingga", "status": "locked" },
-            { "nama": "Kuis", "status": "locked" }
-        ],
-        "status": false
-    },
-    {
-        "materi": "Turunan",
-        "deskripsi": "Belajar bagaimana menurunkan berbagai persamaan",
-        "level": [
-            { "nama": "Pengenalan", "status": "locked"},
-            { "nama": "Turunan Fungsi Aljabar", "status": "locked" },
-            { "nama": "Aturan Rantai", "status": "locked" },
-            { "nama": "Aturan L'Hopital", "status": "locked" },
-            { "nama": "Kuis", "status": "locked" }
-        ],
-        "status": false
-    },
-    {
-        "materi": "Integral",
-        "deskripsi": "Belajar bagaimana menyelesaikan persamaan integral",
-        "level": [
-            { "nama": "Pengenalan", "status": "locked"},
-            { "nama": "Integral Aljabar", "status": "locked" },
-            { "nama": "Integral Trigonometri", "status": "locked" },
-            { "nama": "Penerapan Integral", "status": "locked" },
-            { "nama": "Kuis", "status": "locked" }
-        ],
-        "status": false
-    }
+      },
+      {
+        "id": 2,
+        "nama": "Sistem Persamaan 2 Variabel",
+        "slug_level": "sistem-persamaan-2-variabel",
+        "status": "locked",
+        "youtube": "https://www.youtube.com/embed/W3o9-8vCdsc?si=RLgRfuXuHW0d5Ple",
+        "pengantar": ""
+      },
+      {
+        "id": 3,
+        "nama": "Metode Grafik",
+        "slug_level": "metode-grafik",
+        "status": "locked",
+        "youtube": "https://www.youtube.com/embed/W3o9-8vCdsc?si=RLgRfuXuHW0d5Ple",
+        "pengantar": ""
+      },
+      {
+        "id": 4,
+        "nama": "Sistem Persamaan 3 Variabel",
+        "slug_level": "sistem-persamaan-3-variabel",
+        "status": "locked",
+        "youtube": "https://www.youtube.com/embed/W3o9-8vCdsc?si=RLgRfuXuHW0d5Ple",
+        "pengantar": ""
+      },
+      {
+        "id": 5,
+        "nama": "Kuis",
+        "slug_level": "kuis",
+        "status": "locked",
+        "youtube": "https://www.youtube.com/embed/W3o9-8vCdsc?si=RLgRfuXuHW0d5Ple",
+        "pengantar": ""
+      }
+    ]
+  },
+  {
+    "materi": "Limit",
+    "deskripsi": "Belajar bagaimana menyelesaikan persamaan-persamaan limit",
+    "level": [
+      { "nama": "Pengenalan", "status": "locked" },
+      { "nama": "Limit Aljabar", "status": "locked" },
+      { "nama": "Limit Trigonometri", "status": "locked" },
+      { "nama": "Limit Fungsi Tak Hingga", "status": "locked" },
+      { "nama": "Kuis", "status": "locked" }
+    ],
+    "status": false
+  },
+  {
+    "materi": "Turunan",
+    "deskripsi": "Belajar bagaimana menurunkan berbagai persamaan",
+    "level": [
+      { "nama": "Pengenalan", "status": "locked" },
+      { "nama": "Turunan Fungsi Aljabar", "status": "locked" },
+      { "nama": "Aturan Rantai", "status": "locked" },
+      { "nama": "Aturan L'Hopital", "status": "locked" },
+      { "nama": "Kuis", "status": "locked" }
+    ],
+    "status": false
+  },
+  {
+    "materi": "Integral",
+    "deskripsi": "Belajar bagaimana menyelesaikan persamaan integral",
+    "level": [
+      { "nama": "Pengenalan", "status": "locked" },
+      { "nama": "Integral Aljabar", "status": "locked" },
+      { "nama": "Integral Trigonometri", "status": "locked" },
+      { "nama": "Penerapan Integral", "status": "locked" },
+      { "nama": "Kuis", "status": "locked" }
+    ],
+    "status": false
+  }
 ]

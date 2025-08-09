@@ -55,7 +55,6 @@ export default function Navbar() {
                 <TooltipTrigger asChild>
                   <div className="flex items-center justify-center">
                     <Image
-                      className=""
                       src="/statistics/hati.png"
                       alt="hati"
                       width={50}

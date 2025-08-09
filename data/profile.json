@@ -1,18 +1,18 @@
 [
     {
         "username": "willgregorry",
-        "name": "Willy",
+        "name": "Willy Gregory",
         "email": "willygregory@gmail.com",
         "password": "willy123",
-        "description": "Isi deskripsi profil kamu disini.",
+        "description": "Seorang mahasiswa yang berantusias untuk mempelajari berbagai persoalan matematika.",
         "photo_base64": "",
-        "joined_at": "2025-08-02T15:50:46.566317+07:00",
+        "joined_at": "02-08-2025",
         "stats": {
             "hati": 5,
-            "lama_belajar": 0,
+            "lama_belajar": 8,
             "soal_dikerjakan": 0,
             "penyelesaian": 0,
-            "streak": 0
+            "streak": 8
         }
     }
 ]

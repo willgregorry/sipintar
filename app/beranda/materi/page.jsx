@@ -42,7 +42,7 @@ export default function Beranda() {
 
         {/* Materi-materi */}
         <div className="grid grid-cols-2 h-68 gap-y-4 gap-x-8">
-          <Link href="">
+          <Link href="/beranda/materi/persamaan-linear/pengenalan">
             <div className="bg-[#CAB5A0] px-8 h-full rounded-2xl flex gap-4 justify-start items-center cursor-pointer">
               <div className="flex justify-evenly items-center gap-8">
                 <Image src="/materi/linear.png" alt="linear" width={90} height={90}/>
