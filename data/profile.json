@@ -1,0 +1,18 @@
+[
+    {
+        "username": "willgregorry",
+        "name": "Willy",
+        "email": "willygregory@gmail.com",
+        "password": "willy123",
+        "description": "Isi deskripsi profil kamu disini.",
+        "photo_base64": "",
+        "joined_at": "2025-08-02T15:50:46.566317+07:00",
+        "stats": {
+            "hati": 5,
+            "lama_belajar": 0,
+            "soal_dikerjakan": 0,
+            "penyelesaian": 0,
+            "streak": 0
+        }
+    }
+]

@@ -1,5 +1,7 @@
 import { Nunito, Fredoka } from "next/font/google";
 import "./globals.css";
+import Navbar from "../components/navbar";
+import { AuthProvider } from "../context/authContext";
 
 const nunito = Nunito({
   weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
@@ -26,7 +28,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${nunito.variable} ${fredoka.variable} h-max-screen antialiased overflow-x-hidden bg-[#f8f4e1]`}
       >
-        {children}
+
+        <AuthProvider>
+          <Navbar />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );

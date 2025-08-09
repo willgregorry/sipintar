@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import { Instagram, Facebook, Twitter, Youtube } from "lucide-react";
-import Navbar from "@/components/navbar"
 import { useState } from "react";
 
 export default function Home() {
@@ -21,7 +20,6 @@ export default function Home() {
 
   return (
     <div>
-      <Navbar />
       <main className="flex bg-[#D4FAFA]  ">
         <div className="pt-12">
           <Image

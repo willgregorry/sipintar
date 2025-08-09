@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from "@/components/navbar";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button"
@@ -15,7 +14,6 @@ export default function SignUp() {
     
   return (
     <div>
-      <Navbar />
       <div className="relative gap-[40px] mt-12">
         <Image className="w-screen" src={"/mountains/park.png"} width={5760} height={3372} alt="park" />
         <div className="flex flex-col justify-center items-center gap-4 w-[35%] -mt-[55%] ml-[33%]">

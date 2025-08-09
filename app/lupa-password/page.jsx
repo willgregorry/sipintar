@@ -1,4 +1,3 @@
-import Navbar from "@/components/navbar";
 import Image from "next/image";
 import { ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,7 +5,6 @@ import { Button } from "@/components/ui/button";
 export default function LupaPassword() {
   return (
     <>
-      <Navbar />
       <div className="relative flex gap-[40px] mt-12">
         <div className="absolute">
           <Image

@@ -1,6 +1,5 @@
 'use client';
 
-import Navbar from "@/components/navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -9,14 +8,31 @@ import {
   Eye,
   EyeOff
 } from "lucide-react";
-import { useState } from 'react';
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useAuth } from "../../context/authContext";
 
 export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
 
+  const { login } = useAuth();
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const success = login(email, password);
+    if (success) {
+      router.push("/beranda");
+    } else {
+      setError("Email atau password salah!");
+    }
+  }
+
   return (
     <>
-      <Navbar />
       <div className="relative flex gap-[40px] mt-12">
         <div className="absolute">
           <Image
@@ -38,7 +54,7 @@ export default function SignIn() {
             </h1>
           </div>
           <form
-            action=""
+            onSubmit={handleSubmit}
             className="flex flex-col gap-6 mx-2 my-8 font-semibold"
           >
             <div className="flex flex-col">
@@ -47,8 +63,10 @@ export default function SignIn() {
               </label>
               <input
                 className="h-14 p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
-                type="text"
+                type="email"
                 placeholder="Email atau Username Anda"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
 
@@ -61,6 +79,8 @@ export default function SignIn() {
                   className="h-14 w-full p-4 rounded-full bg-[#AF8F6F] border-3 opacity-50 border-[#543310] focus:border-[#39240d] focus:opacity-70 focus:outline-none placeholder:text-[#54331090]"
                   type={showPassword ? 'text' : 'password'}
                   placeholder="Password Anda"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <button
                     type="button"

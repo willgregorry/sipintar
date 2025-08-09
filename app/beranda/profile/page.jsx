@@ -1,7 +1,7 @@
 'use client'
 
-import Navbar from "@/components/navbar";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -16,17 +16,18 @@ export default function Profile() {
 
   return (
     <>
-      <Navbar />
       <div className="container flex flex-col gap-12 mt-16 mb-28 mx-40 w-auto h-screen">
         <div className="flex gap-4 items-center">
-          <ChevronLeft size={40} strokeWidth={1} />
+          <Link href="/beranda">
+            <ChevronLeft size={40} strokeWidth={1} />          
+          </Link>
           <h1 className="uppercase font-fredoka font-semibold text-accent-theme text-4xl">
             Profile
           </h1>
         </div>
         <div className="container gap-12 flex w-full">
           <Avatar className="w-50 h-50">
-            <AvatarImage src="https://github.com/sulthanrps.png" />
+            <AvatarImage src="/avatar.jpg" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <div className="flex flex-col justify-center gap-2 w-[60%]">
@@ -59,28 +60,28 @@ export default function Profile() {
                     <Image className="w-20 h-20" src='/statistics/waktu_belajar.png' width={252} height={245} alt="waktu_belajar" />
                     <div className="flex flex-col gap-2 justify-center">
                         <p className="uppercase text-xl font-semibold text-accent-theme">Lama Belajar</p>
-                        <p className="text-xl font-semibold text-accent-theme">0</p>
+                        <p className="text-2xl font-bold text-accent-theme">0</p>
                     </div>
                 </div>
                 <div className="flex items-center pl-16 gap-16 h-28 rounded-xl bg-[#CAB5A0]">
                     <Image className="w-20 h-20" src='/statistics/paper.png' width={252} height={245} alt="waktu_belajar" />
                     <div className="flex flex-col gap-2 justify-center">
                         <p className="uppercase text-xl font-semibold text-accent-theme">Soal Dikerjakan</p>
-                        <p className="text-xl font-semibold text-accent-theme">0</p>
+                        <p className="text-2xl font-bold text-accent-theme">0</p>
                     </div>
                 </div>
                 <div className="flex items-center pl-16 gap-16 h-28 rounded-xl bg-[#CAB5A0]">
                     <Image className="w-20 h-20" src='/statistics/streak.png' width={252} height={245} alt="waktu_belajar" />
                     <div className="flex flex-col gap-2 justify-center">
                         <p className="uppercase text-xl font-semibold text-accent-theme">Streak</p>
-                        <p className="text-xl font-semibold text-accent-theme">0</p>
+                        <p className="text-2xl font-bold text-accent-theme">0</p>
                     </div>
                 </div>
                 <div className="flex items-center pl-16 gap-16 h-28 rounded-xl bg-[#CAB5A0]">
                     <Image className="w-20 h-20" src='/statistics/percentage.png' width={252} height={245} alt="waktu_belajar" />
                     <div className="flex flex-col gap-2 justify-center">
                         <p className="uppercase text-xl font-semibold text-accent-theme">Penyelesaian</p>
-                        <p className="text-xl font-semibold text-accent-theme">0</p>
+                        <p className="text-2xl font-bold text-accent-theme">0</p>
                     </div>
                 </div>
             </div>
