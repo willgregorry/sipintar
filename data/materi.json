@@ -3,8 +3,8 @@
         "materi": "Persamaan Linear",
         "deskripsi": "Belajar bagaimana menyelesaikan persamaan 2 variabel dan 3 variabel",
         "level": [
-            { "nama": "Pengenalan", "status": "done", "path": "/materi/persamaan_linear/pengenalan"},
-            { "nama": "Sistem Persamaan 2 Variabel", "status": "current" },
+            { "nama": "Pengenalan", "status": "current", "path": "/materi/persamaan_linear/pengenalan"},
+            { "nama": "Sistem Persamaan 2 Variabel", "status": "locked" },
             { "nama": "Metode Grafik", "status": "locked" },
             { "nama": "Sistem Persamaan 3 Variabel", "status": "locked" },
             { "nama": "Kuis", "status": "locked" }
@@ -14,26 +14,11 @@
         "materi": "Limit",
         "deskripsi": "Belajar bagaimana menyelesaikan persamaan-persamaan limit",
         "level": [
-            "Pengenalan",
-            "Sistem Persamaan 2 Variabel"
-        ],
-        "status": false
-    },
-    {
-        "materi": "Turunan",
-        "deskripsi": "Belajar bagaimana menurunkan berbagai persamaan",
-        "level": [
-            "Pengenalan",
-            "Sistem Persamaan 2 Variabel"
-        ],
-        "status": false
-    },
-    {
-        "materi": "Integral",
-        "deskripsi": "Belajar bagaimana menyelesaikan persamaan integral",
-        "level": [
-            "Pengenalan",
-            "Sistem Persamaan 2 Variabel"
+            { "nama": "Pengenalan", "status": "locked"},
+            { "nama": "Sistem Persamaan 2 Variabel", "status": "locked" },
+            { "nama": "Metode Grafik", "status": "locked" },
+            { "nama": "Sistem Persamaan 3 Variabel", "status": "locked" },
+            { "nama": "Kuis", "status": "locked" }
         ],
         "status": false
     }
