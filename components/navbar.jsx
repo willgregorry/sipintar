@@ -50,7 +50,7 @@ export default function Navbar() {
         {user && (
           <div className="flex items-center gap-8">
             {/* Hati */}
-            {pathname === "/beranda" && (
+            {pathname.startsWith("/beranda") && (
               <Tooltip>
                 <TooltipTrigger asChild>
                   <div className="flex items-center justify-center">
@@ -101,7 +101,7 @@ export default function Navbar() {
             )}
 
             {/* Streak */}
-            {pathname === "/beranda" && (
+            {pathname.startsWith("/beranda") && (
               <Tooltip>
                 <TooltipTrigger asChild>
                   <div className="flex items-center justify-center">
