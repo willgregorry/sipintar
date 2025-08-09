@@ -15,8 +15,7 @@ import {
 export default function Navbar() {
   const { user } = useAuth();
   const pathname = usePathname();
-  // const jlhHati = user?.stats?.hati ?? 0;
-  const jlhHati = 4;
+  const jlhHati = user?.stats?.hati ?? 0;
 
   const [timeLeft, setTimeLeft] = useState(300);
 
