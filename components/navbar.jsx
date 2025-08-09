@@ -42,7 +42,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky flex bg-[#F8F4E1] items-center justify-between px-40 [box-shadow:0_4px_4px_2px_rgba(0,0,0,0.25)]">
+    <header className="fixed w-full z-50 flex bg-[#F8F4E1] items-center justify-between px-40 [box-shadow:0_4px_4px_2px_rgba(0,0,0,0.25)]">
       <div className="flex item-center gap-2 pt-2 pb-2">
         <Image src={"/icon.png"} width={172} height={65} alt="logo" />
       </div>
@@ -66,7 +66,7 @@ export default function Navbar() {
                     </span>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent className="w-100 h-auto">
+                <TooltipContent className="w-90 h-auto">
                   <div className="flex flex-col gap-2 items-center justify-center text-center">
                     <div className="flex items-center justify-center">
                       {Array.from({ length: 5 }).map((_, index) => (
@@ -116,7 +116,7 @@ export default function Navbar() {
                     </span>
                   </div>
                 </TooltipTrigger>
-                <TooltipContent className="w-50 h-auto">
+                <TooltipContent className="w-60 h-auto">
                   <div className="flex flex-col gap-4 items-center justify-center text-center">
                     <div className="flex items-center justify-center gap-2">
                       <Image

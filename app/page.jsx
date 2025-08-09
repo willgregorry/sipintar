@@ -83,7 +83,7 @@ export default function Home() {
         </div>
       </main>
       <section className="h-screen">
-        <div className="relative w-full z-50">
+        <div className="relative w-full z-40">
           <Image
             className="w-full"
             src="/waves/header.png"
