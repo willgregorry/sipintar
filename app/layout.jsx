@@ -18,17 +18,19 @@ const fredoka = Fredoka({
 });
 
 export const metadata = {
-  title: "Sipintar",
-  description: "Turn Trash into Cash, Turn Action into a Cleaner Planet.",
+  title: "SiPintar",
+  description: "Aplikasi Pembelajaran No. 1 di Indonesia.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`scroll-smooth`}>
+      <head>
+        <link rel="icon" href="favicon.ico" />
+      </head>
       <body
         className={`${nunito.variable} ${fredoka.variable} h-max-screen antialiased overflow-x-hidden bg-[#f8f4e1]`}
       >
-
         <AuthProvider>
           <Navbar />
           {children}
